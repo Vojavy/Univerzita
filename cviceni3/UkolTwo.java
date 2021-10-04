@@ -11,6 +11,6 @@ public class UkolTwo {
             for (long x = 1; x <= i; x++) {
                 result = result.multiply(BigInteger.valueOf(x));
             }
-            System.out.println(i + "!! = " + result);
+            System.out.println(i + "! = " + result);
     }
 }

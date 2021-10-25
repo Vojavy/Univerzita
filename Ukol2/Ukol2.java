@@ -6,5 +6,5 @@ public class Ukol2 {
         SpravcePole spravcePole = new SpravcePole(10);
         System.out.println(spravcePole.toString());
     }
-    
+
 }

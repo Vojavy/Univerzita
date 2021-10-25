@@ -14,6 +14,7 @@ public class SpravcePole {
         }
         this.pole = pole;
     }
+
     public int min() {
         int min = 0;
         for (int i = 0; i < this.pole.length-2; i++) {

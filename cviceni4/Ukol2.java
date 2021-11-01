@@ -2,7 +2,7 @@ package com.vojavy;
 
 import java.util.Scanner;
 
-public class Ukol2 {
+public class Main {
     public static void main(String[] args) {
         int i = 0;
 
@@ -20,9 +20,9 @@ public class Ukol2 {
 
         System.out.println("Hraje PC");
 
-        while (poziceKulkyVBubinku != poziceBubinku) {
-            System.out.println("Nic!");
+        if (poziceKulkyVBubinku != poziceBubinku) System.out.println("Nic!");
 
+        while (poziceKulkyVBubinku != poziceBubinku) {
             hrajePocitac = !hrajePocitac;
 
             do {
@@ -31,18 +31,23 @@ public class Ukol2 {
                     if (poziceBubinku == holesNum - 1) poziceBubinku = 1;
                     else  poziceBubinku +=1;
                 }
-            if (hrajePocitac) {
-                System.out.println("Hraje PC");
-            } else {
-                System.out.println("Hraješ ty");
+                if (hrajePocitac) {
+                    System.out.println("Hraje PC");
+                    if (poziceKulkyVBubinku == poziceBubinku) break;
+                    else System.out.println("Nic!");
+                } else {
+                    System.out.println("Hraješ ty");
 
-                System.out.println("Roztočete bubínku");
-                inputScanner.nextLine();
+                    System.out.println("Roztočete bubínku");
+                    inputScanner.nextLine();
 
-                System.out.println("Zmáčknete spoušť");
-                inputScanner.nextLine();
+                    System.out.println("Zmáčknete spoušť");
+                    inputScanner.nextLine();
+
+                    if (poziceKulkyVBubinku == poziceBubinku) break;
+                    else System.out.println("Nic!");
                 }
-            i += 1;
+                i += 1;
             } while (i < 2);
             i = 0;
         }

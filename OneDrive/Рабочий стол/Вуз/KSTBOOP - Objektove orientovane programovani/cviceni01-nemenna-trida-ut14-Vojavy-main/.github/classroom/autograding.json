@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "test",
+      "setup": "sudo update-java-alternatives -s temurin-17-jdk-amd64",
+      "run": "mvn test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
